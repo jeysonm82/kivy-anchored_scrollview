@@ -1,24 +1,12 @@
 # -*- coding: utf-8 -*-
-""" Script de arranque que inicializa la interfaz gráfica
-de la App"""
-import os
 from kivy.config import Config
-Config.set('graphics', 'width', '640')
-Config.set('graphics', 'height', '980')
 from kivy.app import App
-from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.scrollview import ScrollView
-from kivy.uix.button import Button
 from kivy.uix.widget import Widget
-from kivy.uix.label import Label
 from kivy.lang import Factory
 from kivy import properties as props
-import sys
-import traceback
-from kivy.uix.behaviors import FocusBehavior
 from kivy.clock import Clock
 from kivy.lang import Builder
-import time
 from functools import partial
 
 
@@ -227,6 +215,9 @@ TabbedPanel:
                         on_press: print self
 
     """
+
+    Config.set('graphics', 'width', '640')
+    Config.set('graphics', 'height', '980')
 
     class TestApp(App):
         def build(self):
